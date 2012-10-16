@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  - if ('undefined' !== typeof errors && errors.length)
+    ul#errors
+      - each error in errors
+        li.error= error
+  form(action='/jsondb', method='post')
+    #titleField
+      label(for='title') Title
+      input(type='text', name='title')
+    #bodyField
+      label(for='body') Body
+      textarea(name='body', rows=10,cols=60)
+    #submit
+      input(type='submit',class='btn btn-primary') Post
+  - each doc in jsondb
+    hr
+    a(href='/jsondb/'+doc._id)
+      h3
+        = doc.title
+    = doc.body

@@ -1,0 +1,17 @@
+body {
+    font-family: "OpenSansLight", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "MuseoSlab500Regular", Helvetica, Arial, sans-serif;
+}
+
+.hero-unit {
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.hero-unit p {
+    line-height: 140%;
+}
