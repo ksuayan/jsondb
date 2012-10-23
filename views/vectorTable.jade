@@ -1,0 +1,20 @@
+- if (jsondb && jsondb.length)
+  table(class="table table-striped")
+    tr
+      th Date Created
+      th Vector ID
+      th Action
+    - each doc in jsondb
+      tr
+        td
+          a(href='/jsondb/'+doc._id)
+            time(datetime=doc.date.toISOString()).timeago
+              = doc.date.toISOString()
+        td
+          | vector: 
+          a(href='/vector/'+doc._id)
+            = doc._id
+        td
+          a(href='#',id="id-"+doc._id,class="btn btn-mini delete")
+            i(class="icon-remove")
+            | &nbsp;delete

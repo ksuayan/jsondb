@@ -1,0 +1,23 @@
+extends editVector
+
+include includes/errors
+
+block content
+  - if (typeof doc !== 'undefined')
+    div#svg-content
+    = doc._id
+    br
+    = doc.title
+    script
+      var data = !{doc.body};
+  - else
+    div(class="btn-group")
+      button(id="btn-reset",type="button",class="btn") Clear
+      button(id="btn-close",type="button",class="btn") Close
+      button(id="btn-fill",type="button",class="btn") Fill
+      button(id="btn-ctrl-points",type="button",class="btn") Control Points
+      button(id="btn-save",type="button",class="btn") Save
+    div#svg-content
+    script
+      var data = null;
+  

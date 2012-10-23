@@ -7,8 +7,8 @@ var PORT = 80;
 
 function getJsonDb(req, res) {
     jsondb.getJsonDb(req, function(result) {
-        console.log("result", result);
-        res.render('form', {jsondb : result });
+        // console.log("result", result);
+        res.render('listVectors', {jsondb : result });
     });
 };
 
@@ -42,6 +42,22 @@ app.get('/', function(req, res) {
     res.render('home');
 });
 
+app.get('/vector', function(req, res) {
+    res.render('viewVector');
+});
+app.get('/vector/:id', function(req, res) {
+    if (!req.params.id) {
+       res.render('viewVector');
+    } else {
+        jsondb.getJsonDb(req, function(result) {
+            res.render('viewVector', {doc : result[0] });
+        });
+    }
+});
+
+/*
+ * Form Edit View
+ */
 app.get('/jsondb', getJsonDb);
 app.get('/jsondb/:id', getJsonDb);
 app.post('/jsondb', function(req, res) {
@@ -52,6 +68,15 @@ app.post('/jsondb', function(req, res) {
     res.render('processForm');
 });
 
+app.delete('/jsondb/:id', function(req, res) {
+    jsondb.JsonDbModel.findByIdAndRemove(req.params.id, function() {
+        res.render('processForm'); 
+    });
+});
+
+/*
+ * JSON Views
+ */
 app.get('/doc', jsondb.getDocument);
 app.get('/doc/:id', jsondb.getDocument);
 app.post('/doc', jsondb.saveDocument);

@@ -15,3 +15,7 @@ h1, h2, h3 {
 .hero-unit p {
     line-height: 140%;
 }
+
+#svg-content {
+    margin-top: 20px;
+}

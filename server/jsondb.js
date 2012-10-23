@@ -50,8 +50,10 @@ DocumentDB.prototype.saveDocument = function(request, response) {
 DocumentDB.prototype.getJsonDb = function(request, callback) {
     var result = null;
     var query = {};
+    
     if (request.params.id)
         query._id = request.params.id;
+        
     this.JsonDbModel.find(query, function(err,docs){
         if (err) {
             console.log(err);
