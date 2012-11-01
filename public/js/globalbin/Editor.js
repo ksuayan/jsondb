@@ -46,9 +46,12 @@ gb.ui.MapEditor.prototype.drawLine = function() {
 		
 		var len = thisObj.pathElements.index()+1;
 		if (len > 0) {
+		    
 			var previousPoint = thisObj.pathElements.get(len-1);
+			
 			var cp1 = thisObj.getControlPointAt(previousPoint,point, 20);
 			thisObj.pathElements.add(cp1);
+			
 			var cp2 = thisObj.getControlPointAt(previousPoint,point, 80);
 			thisObj.pathElements.add(cp2);
 		}

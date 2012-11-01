@@ -19,7 +19,6 @@ gb.ui.ControlPoint.prototype.setStyle = function(style) {
 	this.style = style;	
 };
 
-
 gb.ui.ControlPoint.prototype.show = function(paper) {
 	
 	var thisObj = this;
@@ -48,6 +47,5 @@ gb.ui.ControlPoint.prototype.show = function(paper) {
 			}
 		}					
 	);
-					
 };
 
