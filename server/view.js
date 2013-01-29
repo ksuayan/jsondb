@@ -25,8 +25,7 @@ ViewHandler.prototype.ViewVector = function(req, res) {
     }
 };
 
-
-ViewHandler.prototype.ProcessForm = function(req, res) {
+ViewHandler.prototype.SaveVector = function(req, res) {
     jsondb.save({
         title : req.body.title,
         body : req.body.body
@@ -34,7 +33,7 @@ ViewHandler.prototype.ProcessForm = function(req, res) {
     res.render('processForm');
 }
 
-ViewHandler.prototype.FindAndRemove = function(req, res) {
+ViewHandler.prototype.DeleteVector = function(req, res) {
     jsondb.JsonDbModel.findByIdAndRemove(req.params.id, function() {
         res.render('processForm'); 
     });

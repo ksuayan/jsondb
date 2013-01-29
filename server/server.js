@@ -41,8 +41,8 @@ app.get('/vector/:id', view.ViewVector);
 // Web View
 app.get('/jsondb', view.ListVectors);
 app.get('/jsondb/:id', view.ListVectors);
-app.post('/jsondb', view.ProcessForm);
-app.delete('/jsondb/:id', view.FindAndRemove);
+app.post('/jsondb', view.SaveVector);
+app.delete('/jsondb/:id', view.DeleteVector);
 
 // API
 app.get('/doc', api.GetDocument);
