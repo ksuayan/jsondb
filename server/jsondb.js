@@ -22,31 +22,6 @@ var DocumentDB = function(){
     this.JsonDbModel = this.db.model('JsonDb', JsonDb);
 };
 
-DocumentDB.prototype.getDocument = function(request, response) {
-    var result = {status:"error"};
-    if (typeof request.params.id != 'undefined') {
-        var query = { _id: request.params.id };
-        jsondb.JsonDbModel.find(query, function(err, docs) {
-            if (err) {
-                console.log(err);
-            } else {
-                result = {status : "ok", result : docs[0] };
-            }
-            response.send(result);
-        });
-    }
-};
-
-DocumentDB.prototype.saveDocument = function(request, response) {
-    var doc = {
-        title : request.body.title,
-        body : request.body.body
-    };
-    var instance = new jsondb.JsonDbModel(doc);
-    instance.save();
-    response.send({status:"ok"});
-};
-
 DocumentDB.prototype.getJsonDb = function(request, callback) {
     var result = null;
     var query = {};
@@ -64,7 +39,6 @@ DocumentDB.prototype.getJsonDb = function(request, callback) {
         }
     });
 };
-
 
 DocumentDB.prototype.save = function(doc) {
     var instance = new this.JsonDbModel(doc);
