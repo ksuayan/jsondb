@@ -2,7 +2,7 @@ var jsondb = require('./jsondb');
 
 
 var ViewHandler = function() {
-    console.log("Initialized WebVeiw handler");
+    console.log("Initialized WebView handler");
 };
 
 ViewHandler.prototype.NewVector = function(req, res) {

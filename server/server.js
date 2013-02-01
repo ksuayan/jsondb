@@ -13,7 +13,6 @@ console.log(conf);
 app.configure(function(){
     app.set('views', path.join(__dirname, '../views'));
     app.set('view engine', 'jade');
-    // app.set('view options', {config : conf.app});
     app.locals({config:conf.app});
     app.use(express.bodyParser({uploadDir: '/tmp/test'}));
     app.use(express.static(path.join(__dirname,"../public")));
@@ -29,6 +28,7 @@ app.all("/", function(req, res, next) {
     console.log("all() ...");
     next();
 });
+
 app.get('/', function(req, res) {
     console.log("get: /");
     res.render('home');
@@ -49,8 +49,11 @@ app.get('/doc', api.GetDocument);
 app.get('/doc/:id', api.GetDocument);
 app.post('/doc', api.SaveDocument);
 
-app.get('/track', trackdb.getTrackList);
-app.get('/track/:id', trackdb.getTrack);
+
+app.get('/genre', trackdb.GetGenre);
+app.get('/track', trackdb.GetTrackList);
+app.get('/track/:id', trackdb.GetTrack);
+
 
 app.listen(PORT);
 console.log('Go to http://localhost:' + PORT);
