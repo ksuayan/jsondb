@@ -49,7 +49,6 @@ app.get('/doc', api.GetDocument);
 app.get('/doc/:id', api.GetDocument);
 app.post('/doc', api.SaveDocument);
 
-
 app.get('/genre', trackdb.GetGenre);
 app.get('/search/:term', trackdb.SearchTerm);
 app.get('/track', trackdb.GetTrackList);

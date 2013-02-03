@@ -24,24 +24,25 @@ var TrackItem = new Schema({
 
 var TrackDB = function(){
     console.log("Initialized TrackDB.");
-    mongoose.connect('mongodb://localhost/itunes');
+    mongoose.connect('mongodb://localhost/itunes', {db:{safe:true}});
     mongoose.set('debug', true);
     
     this.pagination = {skip:0,pagination:50};
     this.fields = {"Name":1, "Artist":1, "Album":1};
     
     this.db = mongoose.connection;
-    this.db.on('error', console.error.bind(console, 'connection error:'));
+    this.db.on('error', console.error.bind(console, 'Connection error.'));
     this.db.once('open', function callback () {console.log("Connected.")});
+    this.db.once('close', this.close);
     this.TrackDbModel = this.db.model('trackdbs', TrackItem);
-    this.genres = mongoose.model('genres', new Schema({"_id":String, "value": Number}));        
+    this.genres = this.db.model('genres', new Schema({"_id":String, "value": Number}));        
 };
 
 TrackDB.prototype.GetTrack = function(request, response) {
     var result = {status:"error"};
     if (typeof request.params.id != 'undefined') {
         var query = { _id: request.params.id };
-        trackdb.TrackDbModel.find(query, function(err, docs) {
+        trackdb.TrackDbModel.find(query, {}, trackdb.pagination, function(err, docs) {
             if (err) {
                 console.log(err);
             } else {
@@ -73,15 +74,24 @@ TrackDB.prototype.SearchTerm = function(request, response) {
     var result = {status:"error"};
     if (typeof request.params.term != 'undefined') {
         var re = new RegExp(request.params.term, 'i');
-        console.log("fields", this.fields);
-        trackdb.TrackDbModel.find({}, trackdb.fields, trackdb.pagination).or([{'Name': { $regex: re }}, 
-             {'Artist': { $regex: re }}, 
-             {'Album': { $regex: re }}])
-             .sort({'Artist':1,'Album':1})
-             .exec(function(err, docs){
-                  result = {status : "ok", result : docs };
-                  response.send(result);
-              });
+        
+		var stream = trackdb.TrackDbModel.find({}, trackdb.fields, trackdb.pagination).or([
+			{'Name': {$regex:re}}, 
+            {'Artist': {$regex:re}}, 
+            {'Album': {$regex:re}}])
+            .sort({'Artist':1, 'Album':1})
+            .stream();
+            
+        var docs = []; 
+        stream.on('data', function(doc){
+        	docs.push(doc);
+        	console.log("doc", doc);
+        }).on('error', function(err){
+        	console.log("error", err);
+        }).on('close', function(){
+        	result = {status : "ok", result : docs };
+			response.send(result);
+        });
     }
 };
 
