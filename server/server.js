@@ -51,6 +51,7 @@ app.post('/doc', api.SaveDocument);
 
 
 app.get('/genre', trackdb.GetGenre);
+app.get('/search/:term', trackdb.SearchTerm);
 app.get('/track', trackdb.GetTrackList);
 app.get('/track/:id', trackdb.GetTrack);
 

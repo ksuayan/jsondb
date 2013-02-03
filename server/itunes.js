@@ -26,15 +26,15 @@ var TrackDB = function(){
     console.log("Initialized TrackDB.");
     mongoose.connect('mongodb://localhost/itunes');
     mongoose.set('debug', true);
+    
+    this.pagination = {skip:0,pagination:50};
+    this.fields = {"Name":1, "Artist":1, "Album":1};
+    
     this.db = mongoose.connection;
     this.db.on('error', console.error.bind(console, 'connection error:'));
     this.db.once('open', function callback () {console.log("Connected.")});
-
-    
     this.TrackDbModel = this.db.model('trackdbs', TrackItem);
-    this.genreCollection = mongoose.model('genres', new Schema({"_id":String, "value": Number}));        
-    
-    // console.log(this.genreCollection);
+    this.genres = mongoose.model('genres', new Schema({"_id":String, "value": Number}));        
 };
 
 TrackDB.prototype.GetTrack = function(request, response) {
@@ -57,11 +57,7 @@ TrackDB.prototype.GetTrackList = function(request, response) {
     var query = { "Genre": "Alternative/Punk" };
     var fields = {"Name":1,"Artist":1,"Genre":1};
     var allfields = {};
-    var pagination = {skip:0, limit:20};
-    
-    console.log("getTrackList");
-    
-    trackdb.TrackDbModel.find(query, allfields, pagination,
+    trackdb.TrackDbModel.find(query, allfields, trackdb.pagination,
         function(err, docs) {
             if (err) {
                 console.log(err);
@@ -73,10 +69,25 @@ TrackDB.prototype.GetTrackList = function(request, response) {
         });
 };
 
+TrackDB.prototype.SearchTerm = function(request, response) {
+    var result = {status:"error"};
+    if (typeof request.params.term != 'undefined') {
+        var re = new RegExp(request.params.term, 'i');
+        console.log("fields", this.fields);
+        trackdb.TrackDbModel.find({}, trackdb.fields, trackdb.pagination).or([{'Name': { $regex: re }}, 
+             {'Artist': { $regex: re }}, 
+             {'Album': { $regex: re }}])
+             .sort({'Artist':1,'Album':1})
+             .exec(function(err, docs){
+                  result = {status : "ok", result : docs };
+                  response.send(result);
+              });
+    }
+};
+
 TrackDB.prototype.GetGenre = function(request, response) {
     var result = {status:"error"};
-    
-    trackdb.genreCollection.find({}, {}, {skip:0, limit:20}, function(err, data) {
+    trackdb.genres.find({}, {}, trackdb.pagination, function(err, data) {
         if (err) {
             console.log(err);
         } else {
@@ -86,7 +97,6 @@ TrackDB.prototype.GetGenre = function(request, response) {
         response.send(result);
     });
 };
-
 
 TrackDB.prototype.close = function(){
     this.db.close(function() {
