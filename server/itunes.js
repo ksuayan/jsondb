@@ -81,11 +81,9 @@ TrackDB.prototype.SearchTerm = function(request, response) {
             {'Album': {$regex:re}}])
             .sort({'Artist':1, 'Album':1})
             .stream();
-            
         var docs = []; 
         stream.on('data', function(doc){
         	docs.push(doc);
-        	console.log("doc", doc);
         }).on('error', function(err){
         	console.log("error", err);
         }).on('close', function(){
