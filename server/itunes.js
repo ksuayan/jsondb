@@ -28,7 +28,7 @@ var TrackDB = function(){
     mongoose.set('debug', true);
     
     this.pagination = {skip:0,pagination:50};
-    this.fields = {"Name":1, "Artist":1, "Album":1};
+    this.fields = {"_id":1, "Name":1, "Artist":1, "Album":1};
     
     this.db = mongoose.connection;
     this.db.on('error', console.error.bind(console, 'Connection error.'));
