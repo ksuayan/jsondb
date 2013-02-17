@@ -20,12 +20,11 @@ app.configure(function(){
     app.use(express.cookieParser());
     app.use(express.session({secret : 'boyakasha'}));
     app.use(express.errorHandler({ 
-        dumpExceptions : true,
-        showStack : true}));
+        dumpExceptions : false,
+        showStack : false}));
 });
 
 app.all("/", function(req, res, next) {
-    console.log("all() ...");
     res.header('Access-Control-Allow-Origin', req.headers.origin || "*");
     res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,HEAD,DELETE,OPTIONS');
     res.header('Access-Control-Allow-Headers', 'content-Type,x-requested-with');
@@ -33,7 +32,6 @@ app.all("/", function(req, res, next) {
 });
 
 app.get('/', function(req, res) {
-    console.log("get: /");
     res.render('home');
 });
 
