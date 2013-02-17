@@ -2,6 +2,10 @@
   "name": "jsondb",
   "description": "JSON DB",
   "version": "0.0.1",
+    "engines": {
+    "node": "0.8.x",
+    "npm":  "1.1.x"
+  },
   "homepage": "https://github.com/ksuayan/jsondb/",
   "repository": {
     "type": "git",
