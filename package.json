@@ -2,9 +2,9 @@
   "name": "jsondb",
   "description": "JSON DB",
   "version": "0.0.1",
-    "engines": {
-    "node": "0.8.x",
-    "npm":  "1.1.x"
+  "engines": {
+    "node": "0.8.19",
+    "npm":  "1.2.10"
   },
   "homepage": "https://github.com/ksuayan/jsondb/",
   "repository": {
@@ -22,7 +22,7 @@
     "lib": "lib"
   },
   "dependencies": {
-    "express": "3.x",
+    "express": "3.1.0",
     "mongoose": "3.5.5",
     "jade": ">=0.26.2",
     "request": "2.9.x",
