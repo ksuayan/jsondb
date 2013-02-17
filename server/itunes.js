@@ -24,7 +24,7 @@ var TrackItem = new Schema({
 
 var TrackDB = function(){
     console.log("Initialized TrackDB.");
-    mongoose.connect('mongodb://localhost/itunes', {db:{safe:true}});
+    mongoose.connect('mongodb://itunes:itunes@linus.mongohq.com:10095/app12013897', {db:{safe:true}});
     // mongoose.set('debug', true);
     
     this.pagination = {skip:0,pagination:50};
