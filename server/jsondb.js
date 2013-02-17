@@ -18,7 +18,7 @@ var JsonDb = new Schema({
 
 var DocumentDB = function(){
     console.log("Initialized DocumentDB.");
-    this.db = mongoose.createConnection('mongodb://localhost/jsondb');
+    this.db = mongoose.createConnection('mongodb://itunes:itunes@linus.mongohq.com:10095/app12013897');
     this.JsonDbModel = this.db.model('JsonDb', JsonDb);
 };
 
