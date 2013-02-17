@@ -10,7 +10,7 @@ $(function() {
         idAttribute: '_id',
         initialize: function(){
             this.on("change", function(model){
-                console.debug("model changed", model);
+                // console.debug("model changed", model);
             });
         }
     });
@@ -20,20 +20,20 @@ $(function() {
         url: function() {
             var term = $("#search-term").val() || "hello";
             var url = "/search/"+term;
-            console.debug("url >>> ", url);
+            // console.debug("url >>> ", url);
             return url;
         },
         initialize: function() {
-            console.debug("Init Tracks Collection");
+            // console.debug("Init Tracks Collection");
             _.bindAll(this,'retrieve');
             this.retrieve();
         },
         retrieve: function() {
             var self = this;
-            console.debug("retrieve...");
+            // console.debug("retrieve...");
             this.fetch({
                 success: function(collection, response, options) {
-                    console.debug("results...", collection);
+                    // console.debug("results...", collection);
                     self.reset();
                     self.add(response.result);
                     self.trigger("change");
@@ -65,7 +65,7 @@ $(function() {
         el: '#tracks',
         initialize: function() {
             var self = this;
-            console.debug("Init Collections View");
+            // console.debug("Init Collections View");
              _.bindAll(this, 'render', 'appendTrack'); 
 
             this.collection = new Tracks();
@@ -91,7 +91,7 @@ $(function() {
     var SearchView = Backbone.View.extend({
         el: '#search-form',
         initialize: function() {
-            console.debug("Init SearchView.");
+            // console.debug("Init SearchView.");
             _.bindAll(this,'render','goSearch');
             this.render();
         },
@@ -103,13 +103,13 @@ $(function() {
         
         render: function() {
             var template = _.template( $("#search-template").html(), {} );
-            console.debug("searchView", this);
+            // console.debug("searchView", this);
             this.$el.append(template);
             return this;
         },
         
         goSearch: function(e) {
-           console.debug("event:", e);
+           // console.debug("event:", e);
            e.preventDefault();
            listView.initialize();
         }       
