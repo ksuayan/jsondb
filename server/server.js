@@ -5,7 +5,7 @@ var view = require('./view');
 var api = require('./api');
 var trackdb = require('./itunes');
 var path = require('path');
-var PORT = 8000;
+var PORT = 14808;
 var app = express();
 
 console.log(conf);
