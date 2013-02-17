@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "engines": {
     "node": "0.6.20",
-    "npm":  "1.2.10"
+    "npm":  "1.0.16"
   },
   "homepage": "https://github.com/ksuayan/jsondb/",
   "repository": {
@@ -27,9 +27,6 @@
     "jade": ">=0.26.2",
     "request": "2.9.x",
     "debug": "0.5.0"
-  },
-  "devDependencies": {
-    "express": "3.x"
   },
   "engines": {
     "node": ">=0.4"
