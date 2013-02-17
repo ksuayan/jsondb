@@ -19,9 +19,11 @@ app.configure(function(){
     app.use(express.favicon());
     app.use(express.cookieParser());
     app.use(express.session({secret : 'boyakasha'}));
+    /*
     app.use(express.errorHandler({ 
         dumpExceptions : true,
         showStack : true}));
+    */
 });
 
 app.all("/", function(req, res, next) {
