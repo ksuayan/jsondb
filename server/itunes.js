@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
-    
+var conf = require('./conf');
+
 var Schema = mongoose.Schema, 
     ObjectId = Schema.ObjectId;
 
@@ -24,8 +25,7 @@ var TrackItem = new Schema({
 
 var TrackDB = function(){
     console.log("Initialized TrackDB.");
-    mongoose.connect('mongodb://itunes:itunes@linus.mongohq.com:10095/app12013897', {db:{safe:true}});
-    // mongoose.set('debug', true);
+    mongoose.connect(conf.app.mongoURL, {db:{safe:true}});
     
     this.pagination = {skip:0,pagination:50};
     this.fields = {"_id":1, "Name":1, "Artist":1, "Album":1};

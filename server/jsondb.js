@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
-    
+var conf = require('./conf');
+
 var Schema = mongoose.Schema, 
     ObjectId = Schema.ObjectId;
 
@@ -18,7 +19,7 @@ var JsonDb = new Schema({
 
 var DocumentDB = function(){
     console.log("Initialized DocumentDB.");
-    this.db = mongoose.createConnection('mongodb://itunes:itunes@linus.mongohq.com:10095/app12013897');
+    this.db = mongoose.createConnection(conf.app.mongoURL);
     this.JsonDbModel = this.db.model('JsonDb', JsonDb);
 };
 

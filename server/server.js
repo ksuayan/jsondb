@@ -5,7 +5,7 @@ var view = require('./view');
 var api = require('./api');
 var trackdb = require('./itunes');
 var path = require('path');
-var PORT = process.env.PORT || 8000;
+
 var app = express();
 
 console.log(conf);
@@ -18,7 +18,7 @@ app.configure(function(){
     app.use(express.static(path.join(__dirname,"../public")));
     app.use(express.favicon());
     app.use(express.cookieParser());
-    app.use(express.session({secret : 'boyakasha'}));
+    app.use(express.session({secret : 'booyakasha'}));
     app.use(express.errorHandler({ 
         dumpExceptions : false,
         showStack : false}));
@@ -56,7 +56,7 @@ app.get('/track', trackdb.GetTrackList);
 app.get('/track/:id', trackdb.GetTrack);
 
 
-app.listen(PORT);
-console.log('Go to http://localhost:' + PORT);
+app.listen(conf.app.port);
+console.log('Go to http://localhost:' + conf.app.port);
 console.log('path: ', __dirname);
 module.exports = app;

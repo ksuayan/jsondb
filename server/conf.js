@@ -1,6 +1,8 @@
 module.exports = {
     app : {
-        host : 'http://intense-beach-5801.herokuapp.com',
+        host : "http://localhost",
+        port : process.env.PORT || 80,
+        mongoURL : process.env.MONGOHQ_URL || "mongodb://localhost/itunes",
         name : 'JsonDB',
         author : 'Kyo Suayan',
         description : 'JsonDB is a sandbox application.',
