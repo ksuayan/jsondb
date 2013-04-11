@@ -1,12 +1,13 @@
 var express = require('express');
+var app = express();
+var server = require('http').createServer(app);
+var io = require('socket.io').listen(server);
 var conf = require('./conf');
 var jsondb = require('./jsondb');
 var view = require('./view');
 var api = require('./api');
 var trackdb = require('./itunes');
 var path = require('path');
-
-var app = express();
 
 console.log(conf);
 
@@ -55,8 +56,14 @@ app.get('/search/:term', trackdb.SearchTerm);
 app.get('/track', trackdb.GetTrackList);
 app.get('/track/:id', trackdb.GetTrack);
 
+io.sockets.on('connection', function (socket) {
+    socket.emit('news', { hello: 'world' });
+    socket.on('my other event', function (data) {
+        console.log(data);
+    });
+});
 
-app.listen(conf.app.port);
+server.listen(conf.app.port);
 console.log('Go to http://localhost:' + conf.app.port);
 console.log('path: ', __dirname);
 module.exports = app;
