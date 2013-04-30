@@ -36,6 +36,8 @@ app.get('/', function(req, res) {
     res.render('home');
 });
 
+app.get('/ws', function(req, res) { res.render('ws'); });
+
 // SVG View
 app.get('/vector', view.NewVector);
 app.get('/vector/:id', view.ViewVector);
@@ -58,7 +60,7 @@ app.get('/track/:id', trackdb.GetTrack);
 
 io.sockets.on('connection', function (socket) {
     socket.emit('news', { hello: 'world' });
-    socket.on('my other event', function (data) {
+    socket.on('boom', function (data) {
         console.log(data);
     });
 });
