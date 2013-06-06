@@ -1,3 +1,3 @@
 $(window).load(function () {
-    $("#bigscreen").fullscreen();
+    $("body").fullscreen();
 });
