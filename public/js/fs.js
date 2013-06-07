@@ -1,12 +1,14 @@
 (function ($) {
-    $.fn.fullscreen = function(options) {
 
+    $.fn.fullscreen = function(options) {
         var settings = $.extend({
             front: "#bg-front",
             back: "#bg-back",
             bgHeightClass: 'bgheight',
             bgWidthClass: 'bgwidth',
             refreshInterval: 5000,
+            fadeOutTime: 700,
+            fadeInTime: 500,
             images: ["images/image-001.png","images/image-002.png","images/image-003.png"]
         }, options);
 
@@ -23,13 +25,12 @@
             } else {
                 index = 0;
             }
-
             var onComplete = function() {
                 $bg.attr("src", settings.images[index]);
-                $bg.fadeIn(500);
+                imageAspect = $bg.width() / $bg.height();
+                $bg.fadeIn(settings.fadeInTime);
             };
-
-            $bg.fadeOut(700, onComplete);
+            $bg.fadeOut(settings.fadeOutTime, onComplete);
         };
 
         var setRefreshInterval = function() {
