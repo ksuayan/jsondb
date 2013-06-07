@@ -6,7 +6,7 @@
             back: "#bg-back",
             bgHeightClass: 'bgheight',
             bgWidthClass: 'bgwidth',
-            refreshInterval: 3000,
+            refreshInterval: 5000,
             images: ["images/image-001.png","images/image-002.png","images/image-003.png"]
         }, options);
 
@@ -23,7 +23,13 @@
             } else {
                 index = 0;
             }
-            $bg.attr("src", settings.images[index]);
+
+            var onComplete = function() {
+                $bg.attr("src", settings.images[index]);
+                $bg.fadeIn(500);
+            };
+
+            $bg.fadeOut(700, onComplete);
         };
 
         var setRefreshInterval = function() {
