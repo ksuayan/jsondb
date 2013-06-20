@@ -1,0 +1,399 @@
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<content>
+
+    <entry id="bofa_hs">
+        <meta>
+            <title>Kyo Suayan | Development Work | Higher Standards Brand Rollout, Bank of America</title>
+            <description>Development work for Higher Standards Brand Rollout.</description>
+            <keywords>CSS, Javascript, BankofAmerica.com</keywords>
+        </meta>
+
+        <name>BankofAmerica.com</name>
+        <subhead>Higher Standards Brand Rollout</subhead>
+        <splash src="/development/images/splash_bofa_hs.jpg" width="640" height="244" alt="" />
+        <description>
+            <para>At Bank of America's Globals and Home Page Team we launched the
+                Higher Standards brand for which we won the Webby Award in the Banking &amp;
+                Bill Pay category in 2006. The site's user base has grown 10 times in the past 5 years.</para>
+
+            <para>I was involved in the implementation of visual design specifcations
+                by our User Centered Design and Research Group into sitewide assets such as CSS stylesheets,
+                XSL templates, rich media content and ColdFusion Custom Tags in the current look and feel.
+                These shared assets are used by the product content and application pages
+                for consistency, reusability, and ease of maintenance.</para>
+        </description>
+
+        <techlist>
+            <techitem>ColdFusion</techitem>
+            <techitem>CSS</techitem>
+            <techitem>JavaScript</techitem>
+            <techitem>Flash</techitem>
+            <techitem>XML</techitem>
+            <techitem>XSL</techitem>
+            <techitem>Accessibility</techitem>
+        </techlist>
+    </entry>
+
+
+    <entry id="bofa_redesign">
+        <meta>
+            <title>Kyo Suayan | Development Work | Hub Pages Site Redesign, Bank of America</title>
+            <description>Hub Pages Site Redesign</description>
+            <keywords>project, management, css, xml</keywords>
+        </meta>
+
+        <name>BankofAmerica.com</name>
+        <subhead>Hub Pages Site Redesign</subhead>
+        <splash src="/development/images/splash_bofa_redesign.jpg" width="640" height="244" alt="" />
+        <description>
+            <para>High traffic sections of the site were updated to reflect consistency with the new visual design standard.</para>
+            <para>As Technical Delivery Manager, this multi-phase project was delivered on time and well within our target budget.
+                I also provided technical support to our development team to ensure our Web Accessibility requirements are met.</para>
+        </description>
+        <techlist>
+            <techitem>ColdFusion</techitem>
+            <techitem>CSS</techitem>
+            <techitem>JavaScript</techitem>
+            <techitem>XML</techitem>
+            <techitem>XSL</techitem>
+            <techitem>Accessibility</techitem>
+        </techlist>
+    </entry>
+
+    <entry id="bofa_associate_banking">
+
+        <meta>
+            <title>Kyo Suayan | Development Work | Associate Banking, Bank of America</title>
+            <description>Development work for Associate Banking. </description>
+            <keywords>Coldfusion, XML, XSLT, CSS, Javascript</keywords>
+        </meta>
+
+        <name>Associate Banking</name>
+        <subhead>Bank of America </subhead>
+        <splash src="/development/images/splash_bofa_ab_02.jpg" width="640" height="244" alt="" />
+        <description>
+            <para>In my role as Technical Delivery Lead, I managed a small team of developers to rollout a new look
+                and feel for the Associate Banking website designed by an external vendor.</para>
+
+            <para>I designed the core application framework that generated HTML markup dynamically.
+                Presentation and content were seperated using XSL, XML and CSS.
+                Web Accessibility has always been a key requirement in all of our projects and I had to make sure that any
+                JavaScript dependent features we implemented complied to our standard.</para>
+        </description>
+        <techlist>
+            <techitem>ColdFusion</techitem>
+            <techitem>Application Framework</techitem>
+            <techitem>XML</techitem>
+            <techitem>XSL</techitem>
+            <techitem>CSS</techitem>
+            <techitem>HTML</techitem>
+            <techitem>JavaScript</techitem>
+            <techitem>Accessibility</techitem>
+        </techlist>
+    </entry>
+
+
+    <entry id="sgi">
+        <meta>
+            <title>Kyo Suayan | Development Work | SGI Supportfolio</title>
+            <description>Development work for SGI Supportfolio</description>
+            <keywords>Perl, CSS, Javascript</keywords>
+        </meta>
+
+        <name>SGI Supportfolio</name>
+        <subhead>Sitewide Navigation for Supportfolio Website</subhead>
+        <splash src="/development/images/splash_sgi_support.jpg" width="640" height="244" alt="" />
+        <description>
+            <para>Supportfolio Online allows SGI customers to quickly and easily solve their
+                SGI support issues online, 24 hours a day. The easy-to-use Supportfolio
+                Online interface saves time by providing access to online case
+                reporting and management, latest software updates and patches, with full-featured
+                search and information retrieval, and personalized e-mail notification.</para>
+
+            <para>I worked fulltime on Supportfolio and was responsible for designing a consistent navigation
+                system which enabled us to rebrand a collection of some 80,000+ documents using command line utilities
+                that I developed.</para>
+
+            <para>Since parts of the site are CGI applications, I also wrote a Perl API that developers used
+                to incorporate the navigation in their applications. Our team was responsible for the
+                look'n'feel of the IRIX, Linux and Windows NT support home pages.
+            </para>
+        </description>
+        <techlist>
+            <techitem>Perl</techitem>
+            <techitem>PHP</techitem>
+            <techitem>Netscape Enterprise Servers</techitem>
+            <techitem>SGI IRIX</techitem>
+        </techlist>
+    </entry>
+
+
+
+    <entry id="sgi_esp">
+
+        <meta>
+            <title>Kyo Suayan | Development Work | SGI Embedded Support Partner</title>
+            <description>Development work for SGI Supportfolio</description>
+            <keywords>Perl, CSS, Javascript</keywords>
+        </meta>
+
+        <name>SGI Embedded Support Partner</name>
+        <subhead>Development Work for ESP</subhead>
+        <splash src="/development/images/splash_sgi_esp_01.jpg" width="640" height="244" alt="" />
+        <description>
+            <para>Embedded Support Partner (ESP) is a web based application bundled with the IRIX Operating System.
+                It helps administrators to monitor and generate reports on system events.</para>
+
+            <para>The System Support Tools team explained the challenges with their previous version of their
+                flagship product and I was given the freedom to revamp the navigational structure to reveal
+                and simplify access to its 30 main functionalities.</para>
+
+            <para>I had the chance to work on DSP, a proprietary dynamic server scripting language
+                that was embedded within the application webserver itself.
+                The redesign resulted in improved usability, navigation and visual appeal.</para>
+        </description>
+        <techlist>
+            <techitem>Photoshop</techitem>
+            <techitem>DSP</techitem>
+            <techitem>JavaScript</techitem>
+        </techlist>
+    </entry>
+
+
+
+
+    <entry id="bofa_coremetrics">
+
+        <meta>
+            <title>Kyo Suayan | Development Work | Coremetrics Pilot Project, Bank of America</title>
+            <description>Coremetrics Tagging of BankofAmerica.com</description>
+            <keywords>ColdFusion, Javascript</keywords>
+        </meta>
+
+        <name>Coremetrics Tagging of BankofAmerica.com</name>
+        <subhead>Pilot Project</subhead>
+        <description>
+            <para>As Technical Delivery Lead, I designed the strategy and implemented the code that enabled us
+                to deploy this third party tagging and tracking functionality within the select high revenue sections of bankofamerica.com.
+            </para>
+            <para>I worked closely with our vendor contacts in resolving technical issues and our business partners to
+                meet their dynamic reporting requirements. The project met and surpassed our original business requirements that it is
+                now a key tool in our day to day operations. It has since been deployed across the thousands of pages across
+                bankofamerica.com monitoring traffic patterns for at least 90% of the site.</para>
+        </description>
+        <techlist>
+            <techitem>ColdFusion</techitem>
+            <techitem>JavaScript</techitem>
+        </techlist>
+    </entry>
+
+    <!--
+    <entry id="mobile_themes">
+        <name>Mobile Device Themes</name>
+        <subhead></subhead>
+        <splash src="/development/images/splash_mobile.jpg" width="640" height="244" alt="" />
+        <description>
+        <para><anchor href="/mobile/">KS Graphite</anchor> is a theme for the Symbian OS based Nokia E62.
+         Key UI components are based
+         on Scalable Vector Graphics (SVG) and were assembled using Nokia's free Eclipse based
+         Carbide.ui S60 Theme Edition 3.1.</para>
+
+          <para>A couple of years ago, I also designed my own theme file for Sony Ericsson T-616
+          dubbed <anchor href="/mobile/">SF Nights</anchor>.
+        </para>
+        </description>
+        <techlist>
+            <techitem>Carbide.ui S60</techitem>
+            <techitem>SVG</techitem>
+            <techitem>Adobe Photoshop</techitem>
+        </techlist>
+    </entry>
+     -->
+
+
+    <entry id="core">
+
+        <meta>
+            <title>Kyo Suayan | Development Work | GlobalBin Core</title>
+            <description>Application Testbed</description>
+            <keywords>Spring Framework, Hibernate, Acegi Security, Struts</keywords>
+        </meta>
+
+        <name>GlobalBin Core</name>
+        <subhead>Application Testbed</subhead>
+        <splash src="/development/images/splash_globalbin.jpg" width="640" height="244" alt="" />
+        <description>
+            <para>With so many new technologies constantly emerging in the Java world, it is quite a challenge to stay on
+                top of recent developments. The main purpose of this app is to provide a sandbox enviroment
+                for my personal learning, prototype ideas, and gather J2EE best practices in a reusable module.</para>
+        </description>
+        <techlist>
+            <techitem>Spring Framework</techitem>
+            <techitem>Hibernate</techitem>
+            <techitem>Acegi Security</techitem>
+            <techitem>Struts</techitem>
+            <techitem>JSP 2.0</techitem>
+            <techitem>MySQL</techitem>
+        </techlist>
+    </entry>
+
+
+
+    <entry id="barangayamerika">
+
+        <meta>
+            <title>Kyo Suayan | Development Work | BarangayAmerica.com</title>
+            <description>Online Community based on Drupal 4.x</description>
+            <keywords>Drupal, PHP</keywords>
+        </meta>
+
+        <name>BarangayAmerika.com</name>
+        <subhead>Online Community based on Drupal 4.x</subhead>
+        <splash src="/development/images/splash_barangayamerika.jpg" width="640" height="244" alt="" />
+        <description>
+            <para>BarangayAmerika is a small Filipino Community site powered by Drupal, a popular PHP-based Content Management System.
+                I've created a couple of custom themes for this site and will likely upgrade it to version 5.0 when released.</para>
+        </description>
+        <techlist>
+            <techitem>PHP</techitem>
+            <techitem>Drupal</techitem>
+            <techitem>CSS</techitem>
+            <techitem>CMS</techitem>
+            <techitem>Administration</techitem>
+        </techlist>
+    </entry>
+
+
+    <entry id="pwm">
+
+        <meta>
+            <title>Kyo Suayan | Development Work | PWM</title>
+            <description>PHP based site management tool</description>
+            <keywords>PHP, CSS, GD Library</keywords>
+        </meta>
+
+        <name>PWM</name>
+        <subhead>Site Manager Tool</subhead>
+        <description>
+            <para>PWM stands for PHP Web Modules. It's a collection of PHP 4 objects that I wrote for maintaining:</para>
+            <list>
+                <listitem>a blog</listitem>
+                <listitem>a hiearchical link directory</listitem>
+                <listitem>a hierarchical online gallery</listitem>
+                <listitem>comments</listitem>
+            </list>
+        </description>
+        <techlist>
+            <techitem>PHP</techitem>
+            <techitem>GD Library</techitem>
+            <techitem>MySQL</techitem>
+        </techlist>
+    </entry>
+
+    <entry id="dsi">
+
+        <meta>
+            <title>Kyo Suayan | Development Work | DSI System</title>
+            <description>Corporate Website for San Mateo based IT Consulting company.</description>
+            <keywords>HTML, Flash, San Mateo, Consulting</keywords>
+        </meta>
+
+        <name>DSI System</name>
+        <subhead>Corporate Website</subhead>
+        <splash src="/development/images/splash_dsi.jpg" width="640" height="244" alt="" />
+        <description>
+            <para>DSI System is a San Mateo based IT consulting firm providing staffing services.
+                I also designed the identity system for this company along with some print collaterals.</para>
+        </description>
+        <techlist>
+            <techitem>HTML</techitem>
+            <techitem>Flash</techitem>
+        </techlist>
+    </entry>
+
+
+    <entry id="imagineus">
+
+        <meta>
+            <title>Kyo Suayan | Development Work | ImagineUS!</title>
+            <description>Corporate Website for ImagineUs! LLC.</description>
+            <keywords>PHP, Perl-CGI, CSS, HTML, Photoshop</keywords>
+        </meta>
+
+        <name>ImagineUs!</name>
+        <subhead>Corporate Website</subhead>
+        <splash src="/development/images/splash_imagineus.jpg" width="640" height="244" alt="" />
+        <description>
+            <para>Kit Payne and Caroline K. Huo, two women entrepreneurs started <b>ImagineUs!</b> LLC in 1999 to create
+                products that parents can depend on to make parenting easier. Among their products was the widely acclaimed
+                Doctor Straw, Pack 'n' Go Go, and Baby's First Toothbrush.
+            </para>
+        </description>
+        <techlist>
+            <techitem>PHP</techitem>
+            <techitem>Perl-CGI</techitem>
+            <techitem>CSS</techitem>
+            <techitem>HTML</techitem>
+            <techitem>Photoshop</techitem>
+        </techlist>
+    </entry>
+
+
+
+    <entry id="icrg">
+        <meta>
+            <title>Kyo Suayan | Development Work | International Consulting Resources Group</title>
+            <description>Corporate Website for International Consulting Resources Group.</description>
+            <keywords>ColdFusion, ASP, HTML, Perl</keywords>
+        </meta>
+
+        <name>International Consulting Resources Group</name>
+        <subhead>I.T. Consulting</subhead>
+        <splash src="/development/images/splash_icrg.jpg" width="640" height="244" alt="" />
+        <description>
+            <para>ICRG is an international recruiting service based in San Mateo, California.
+                They have been providing staffing in the Information Technology
+                industry for companies in the San Francisco Bay Area since 1990.</para>
+            <para>This site featured a ColdFusion consultant database which was later ported to ASP.
+                Original branding by another graphic designer was carried over to the site.</para>
+        </description>
+        <techlist>
+            <techitem>ColdFusion</techitem>
+            <techitem>ASP</techitem>
+            <techitem>HTML + SSI</techitem>
+            <techitem>Perl (build scripts)</techitem>
+        </techlist>
+    </entry>
+
+
+    <entry id="apec">
+
+        <meta>
+            <title>Kyo Suayan | Development Work | APEC Summit Labor Market Information Database</title>
+            <description>Web application development for APEC Summit Labor Market Information Database.</description>
+            <keywords>Perl, CGI, Apache HTTPd, Java Applets</keywords>
+        </meta>
+
+        <name>APEC Summit Labor Market Information Database</name>
+        <subhead>1996 Leaders Summit</subhead>
+        <splash src="/development/images/splash_apec_lmi.jpg" width="640" height="244" alt="" />
+        <description>
+            <para>In 1996, world leaders gathered in Manila and Subic Bay for the APEC Summit.</para>
+
+            <para>This application demonstrated a web-based application running on Perl-CGI.
+                Clicking on a country on the world map allows the user to drill down
+                to the country level and view tabular and graphical data retrieved from the backend.
+                Charts were rendered on the fly using Java applets on the browser side.</para>
+        </description>
+        <techlist>
+            <techitem>Perl/CGI</techitem>
+            <techitem>Apache HTTPd</techitem>
+            <techitem>HTML</techitem>
+            <techitem>Java Applets</techitem>
+        </techlist>
+    </entry>
+
+
+
+</content>

@@ -1,0 +1,198 @@
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<content>
+
+    <entry id="alabaster_box">
+        <meta>
+            <title>Kyo Suayan | Design Work | Alabaster Box</title>
+            <description>Album cover design for Alabaster Box.</description>
+            <keywords>Cover art, photography, layout, typography</keywords>
+        </meta>
+
+        <name>Alabaster Box</name>
+        <subhead>Album Cover Design</subhead>
+        <splash src="/portfolio/images/splash_print_abox.jpg" width="640" height="244" alt="" />
+        <description>
+            <para>Cover art, photography, layout and typography.</para>
+        </description>
+    </entry>
+
+
+    <entry id="50_states">
+        <meta>
+            <title>Kyo Suayan | Design Work | 50 States Refill</title>
+            <description>Electronic Packaging for 50 States Refill</description>
+            <keywords>50 States Refill</keywords>
+        </meta>
+
+        <name>50 States Refill</name>
+        <subhead>Electronic Packaging</subhead>
+        <splash src="/portfolio/images/splash_50states.jpg" width="640" height="244" alt="" />
+        <description>
+            <para>
+                50 States Refill is a free Propellerhead Refill by g.no available for download at
+                <anchor href="http://www.propellerheads.se">www.propellerheads.se</anchor>.
+            </para>
+        </description>
+    </entry>
+
+    <entry id="cosmic_passage">
+        <meta>
+            <title>Kyo Suayan | Design Work | Cosmic Passage</title>
+            <description>Album cover design for 'Cosmic Passage</description>
+            <keywords>Cosmic Passage</keywords>
+        </meta>
+
+        <name>Cosmic Passage</name>
+        <subhead>Album Cover Design</subhead>
+        <splash src="/portfolio/images/splash_print_cosmic.jpg" width="640" height="244" alt="" />
+        <description>
+            <para>
+                Photography, layout and typography.
+            </para>
+        </description>
+    </entry>
+
+
+
+    <entry id="chroma">
+        <meta>
+            <title>Kyo Suayan | Design Work | Chroma</title>
+            <description>Self-published book at Lulu.com</description>
+            <keywords>Lulu, Photography, Bay Area, Landscape</keywords>
+        </meta>
+
+        <name>Chroma</name>
+        <subhead>Self-published Book</subhead>
+        <splash src="/portfolio/images/splash_print_chroma.jpg" width="640" height="244" alt="" />
+        <description>
+            <para>
+                Chroma is a selection of 45 color photographs I've taken around the San Francisco Bay Area, California.
+                Available for purchase at <anchor href="http://www.lulu.com/ksuayan">www.lulu.com/ksuayan</anchor>.
+            </para>
+        </description>
+    </entry>
+
+
+
+    <entry id="sgi_esp">
+        <meta>
+            <title>Kyo Suayan | Design Work | SGI Embedded Support Partner</title>
+            <description>User Interface Design</description>
+            <keywords>icon design, splashscreen, navigation, look and feel</keywords>
+        </meta>
+
+        <name>SGI Embedded Support Partner</name>
+        <subhead>User Interface Design</subhead>
+        <splash src="/portfolio/images/splash_sgi_esp_02.jpg" width="640" height="244" alt="" />
+        <description>
+            <para>Icon design, splash screen, navigation and look and feel. See also related <anchor href="/development/doc/sgi_esp">development work</anchor>.
+            </para>
+        </description>
+    </entry>
+
+    <entry id="fairstone">
+        <meta>
+            <title>Kyo Suayan | Design Work | Fairstone LLC</title>
+            <description>Design work for Fairstone LLC.</description>
+            <keywords>branding, identity system, and print collaterals</keywords>
+        </meta>
+
+        <name>Fairstone</name>
+        <subhead>Real Estate</subhead>
+        <splash src="/portfolio/images/splash_identity_fairstone.jpg" width="640" height="244" alt="" />
+        <description>
+            <para>
+                Branding, Identity System and print collaterals.
+            </para>
+        </description>
+    </entry>
+
+
+    <entry id="dsi_system">
+        <meta>
+            <title>Kyo Suayan | Design Work | DSI System</title>
+            <description>Design work for DSI System.</description>
+            <keywords>branding, identity system, and print collaterals</keywords>
+        </meta>
+
+        <name>DSI System</name>
+        <subhead>IT Consulting</subhead>
+        <splash src="/portfolio/images/splash_identity_dsi.jpg" width="640" height="244" alt="" />
+        <description>
+            <para>
+                Branding, Identity System and print collaterals.
+            </para>
+        </description>
+    </entry>
+
+
+    <entry id="imagineus">
+        <meta>
+            <title>Kyo Suayan | Design Work | ImagineUs!</title>
+            <description>Design work for ImagineUs!</description>
+            <keywords>site design</keywords>
+        </meta>
+
+        <name>ImagineUs!</name>
+        <subhead>Corporate Website</subhead>
+        <splash src="/portfolio/images/splash_imagineus.jpg" width="640" height="244" alt="" />
+        <description>
+            <para>Kit Payne and Caroline K. Huo, two women entrepreneurs started <b>ImagineUs!</b> LLC in 1999 to create
+                products that parents can depend on to make parenting easier. Among their products was the widely acclaimed
+                Doctor Straw, Pack 'n' Go Go, and Baby's First Toothbrush.
+            </para>
+        </description>
+    </entry>
+
+
+    <entry id="logos">
+        <meta>
+            <title>Kyo Suayan | Design Work | Logos</title>
+            <description>Logo design work</description>
+            <keywords>logos, identity systems, branding</keywords>
+        </meta>
+
+        <name>Logos</name>
+        <splash src="/portfolio/images/splash_identity_logos.jpg" width="640" height="640" alt="" />
+        <description>
+            <para>Some logos I worked on through the years.</para>
+        </description>
+    </entry>
+
+
+    <entry id="kpt_bryce">
+        <meta>
+            <title>Kyo Suayan | Design Work | 3D Work, KPT Bryce</title>
+            <description>3D Work, KPT Bryce.</description>
+            <keywords>3D graphics, modelling, rendering, lighting</keywords>
+        </meta>
+
+        <name>3D Work</name>
+        <subhead>KPT Bryce</subhead>
+        <splash src="/portfolio/images/splash_bryce.jpg" width="640" height="244" alt="" />
+        <description>
+            <para>I did this series in 1997 on a 486 PC with a meg of graphics RAM.
+                <anchor href="http://www.flickr.com/photos/ksuayan/sets/72157594503455891/" target="_blank">Click here</anchor> for more.
+            </para>
+        </description>
+    </entry>
+
+
+    <entry id="lpt">
+        <meta>
+            <title>Kyo Suayan | Design Work | Lake Pyramid Times</title>
+            <description>Print design work for self-promotional newsletter.</description>
+            <keywords>print, publishing, pdf, layout, imagery, typography</keywords>
+        </meta>
+
+        <name>Lake Pyramid Times</name>
+        <subhead>Print</subhead>
+        <splash src="/portfolio/images/splash_print_lpt.jpg" width="640" height="244" alt="" />
+        <description>
+            <para>Self-promotional family newsletter.
+            </para>
+        </description>
+    </entry>
+
+</content>

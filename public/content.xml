@@ -1,0 +1,335 @@
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<content>
+
+    <page id="home">
+
+        <meta>
+            <title>Kyo Suayan | Design + Development</title>
+            <description>Kyo Suayan's personal site</description>
+            <keywords>kyo,suayan,design,development,web developer,san francisco,bay area</keywords>
+        </meta>
+
+        <body>
+            <para>Eleven years of <anchor href="/development">web application development</anchor> experience
+                with various programming languages and OS platforms. Strong <anchor href="/portfolio">visual design</anchor>
+                sense complimented by good understanding of accessibility, usability and branding issues
+                in a high traffic website.</para>
+
+            <para>Motivated by technical challenges and enjoys contributing in a team environment.</para>
+
+            <para>Technical Resume:
+                [<anchor href="/kyo/pdf/wsuayan-20130218.pdf">pdf</anchor>]
+                [<anchor href="/kyo/pdf/wcas-resume-2007.doc">doc</anchor>]
+                [<anchor href="/kyo/pdf/wcas-resume-2007.txt">txt</anchor>]
+            </para>
+
+            <para>Artist's CV:
+                [<anchor href="/about/doc/artist_cv">html</anchor>]
+            </para>
+
+            <para>
+                Elsewhere:<break/>
+                <anchor href="http://www.flickr.com/photos/ksuayan">@flickr.com</anchor>
+                <anchor href="http://www.vimeo.com/ksuayan">@vimeo.com</anchor>
+                <anchor href="http://www.youtube.com/ksuayan">@youtube.com</anchor>
+                <anchor href="http://www.twitter.com/ksuayan">@twitter.com</anchor>
+                <anchor href="http://www.facebook.com/ksuayan">@facebook.com</anchor>
+                <anchor href="">@linkedin.com</anchor>
+                <anchor href="http://www.pbase.com/ksuayan">@pbase.com</anchor>
+                <!--
+                <anchor href="http://www.filphoto.com/index.php?cat=10077">@filphoto.com</anchor>
+                -->
+                <anchor href="http://photo.net/photodb/user?user_id=279214">@photo.net</anchor>
+                <anchor href="http://pixelwacko.multiply.com/">@multiply.com</anchor>
+                <anchor href="http://www.friendster.com/ksuayan">@friendster.com</anchor>
+            </para>
+        </body>
+    </page>
+
+    <page id="about">
+
+        <meta>
+            <title>Kyo Suayan | About Me</title>
+            <description>About Kyo Suayan</description>
+            <keywords>kyo,suayan,resume,pdf,msword,txt</keywords>
+        </meta>
+
+        <body>
+            <section>
+                <list2>
+                    <listitem2>my resume in
+                        <anchor href="/kyo/pdf/wsuayan-20130218.pdf">pdf</anchor>
+                        <!--
+                        <anchor href="/kyo/pdf/wcas-resume-2007.doc">msword</anchor>,
+                        <anchor href="/kyo/pdf/wcas-resume-2007.txt">ascii</anchor>
+                        -->
+                    </listitem2>
+                    <listitem2>my <anchor href="/about/doc/artist_cv">artist's CV</anchor></listitem2>
+                </list2>
+            </section>
+
+
+            <section>
+                <head>Photography</head>
+                <subtext></subtext>
+                <list2>
+                    <listitem2><anchor href="https://www.500px.com/ksuayan">500px</anchor></listitem2>
+                    <listitem2><anchor href="https://plus.google.com/photos/116955157487582787849/albums">Google+</anchor></listitem2>
+                    <!--
+                    <listitem2><anchor href="/kyo/?tpl=view&amp;view=imgview">photography portfolio</anchor></listitem2>
+                    -->
+                    <listitem2><anchor href="http://www.flickr.com/photos/ksuayan">flickr</anchor></listitem2>
+                    <!--
+                    <listitem2><anchor href="http://www.suayan.com/kyo/photoblog/">my old photoblog</anchor></listitem2>
+                    <listitem2><anchor href="http://www.filphoto.com/index.php?cat=10077">filphoto.com</anchor></listitem2>
+                    <listitem2><anchor href="http://www.pbase.com/ksuayan">pbase</anchor></listitem2>
+                    -->
+                    <listitem2><anchor href="http://www.photo.net/photodb/user?user_id=279214">photo.net</anchor></listitem2>
+                    <listitem2><anchor href="/kyo/webslides/">35mm slides</anchor></listitem2>
+                </list2>
+            </section>
+
+            <section>
+                <head>Video and Audio Production</head>
+                <list2>
+                    <listitem2><anchor href="https://www.soundcloud.com/ksuayan">SoundCloud</anchor></listitem2>
+                    <listitem2><anchor href="https://www.vimeo.com/ksuayan">Vimeo</anchor></listitem2>
+                    <listitem2><anchor href="https://www.youtube.com/ksuayan">Youtube</anchor></listitem2>
+                </list2>
+            </section>
+
+            <section>
+                <head>Software Development</head>
+                <list2>
+                    <listitem2><anchor href="https://www.github.com/ksuayan">Github</anchor></listitem2>
+                    <listitem2><anchor href="http://code.google.com/p/globalbin/">J2EE</anchor></listitem2>
+                </list2>
+            </section>
+
+            <section>
+                <head>Other Interests</head>
+                <list2>
+                    <listitem2>data visualization</listitem2>
+                    <listitem2>Hi-Fi audio</listitem2>
+                    <listitem2>music production with Ableton Live and Propellerhead Reason</listitem2>
+                    <listitem2>acrylic and watercolor</listitem2>
+                    <listitem2>flash and actionscript development</listitem2>
+                    <listitem2>video production, color grading  and motion graphics</listitem2>
+                    <listitem2>UX design</listitem2>
+                    <listitem2>humor</listitem2>
+                </list2>
+            </section>
+
+        </body>
+
+    </page>
+
+
+    <page id="archive">
+
+        <meta>
+            <title>Kyo Suayan | Archive</title>
+            <description>Miscellaneous files</description>
+            <keywords>audio, videos, photos, pdfs</keywords>
+        </meta>
+
+
+        <body>
+            <subtext>This section is a work in progress.</subtext>
+            <section>
+                <head>Original Music</head>
+                <list2>
+                    <listitem2>mp3: <anchor href="http://www.suayan.com/kyo/reason/r1.mp3">R1</anchor></listitem2>
+                    <listitem2>mp3: <anchor href="http://www.suayan.com/kyo/reason/Irrational_Blurcase.mp3">Irrational Blurcase</anchor></listitem2>
+                    <listitem2>mp3: <anchor href="http://www.suayan.com/kyo/reason/Chilled_Fridays.mp3">Chilled Fridays</anchor></listitem2>
+                    <listitem2>mp3: <anchor href="http://www.suayan.com/kyo/reason/Living_Methods.mp3">Living Methods</anchor></listitem2>
+                    <listitem2>mp3: <anchor href="http://www.suayan.com/kyo/reason/Beach-House.mp3">Beach House</anchor></listitem2>
+                    <listitem2>mp3: <anchor href="http://www.suayan.com/kyo/reason/cyanotype.mp3">Cyanotype</anchor></listitem2>
+                    <listitem2>mp3: <anchor href="http://www.suayan.com/kyo/reason/Suba_Beach_Sunset.mp3">Suba Beach Sunset</anchor></listitem2>
+                    <listitem2>mp3: <anchor href="http://www.suayan.com/kyo/reason/Tubbataha.mp3">Tubbataha</anchor></listitem2>
+                    <listitem2>m4a: <anchor href="http://www.suayan.com/kyo/reason/Thievery.m4a">Thievery</anchor></listitem2>
+                </list2>
+            </section>
+
+            <section>
+                <head>Remixes</head>
+                <list2>
+                    <listitem2>mp3: <anchor href="http://www.suayan.com/kyo/reason/She_Sells_Sanctuary_(Remixed).mp3">She Sells Sanctuary</anchor> - [remix]</listitem2>
+                    <listitem2>mp3: <anchor href="http://www.suayan.com/kyo/reason/Thieves_Like_Us_[Batang_Kalye_Mix].mp3">Thieves Like Us</anchor> - [Batang Kalye Mix]</listitem2>
+                    <listitem2>mp3: <anchor href="http://www.suayan.com/kyo/reason/enjoy_the_silence.mp3">Enjoy The Silence</anchor> - [remix]</listitem2>
+                    <listitem2>mp3: <anchor href="http://www.suayan.com/kyo/reason/strangelove.mp3">Strangelove</anchor> - [remix]</listitem2>
+                    <listitem2>mp3: <anchor href="http://www.suayan.com/kyo/reason/blt3.mp3">BLT</anchor> - [remix]</listitem2>
+                    <listitem2>mp3: <anchor href="http://www.suayan.com/kyo/reason/Everythng_Is_Under_Control-Coup_Deta.mp3">Everything Is Under Control</anchor> - [Coup D'etat Mix]</listitem2>
+                </list2>
+            </section>
+
+
+            <section>
+                <head>PDFs</head>
+                <list2>
+                    <listitem2>pdf: <anchor href="/kyo/pdf/10-Photographers-flyer.pdf">10 Photographers
+                    </anchor> - A Group Show [flyer]</listitem2>
+                    <listitem2>pdf: <anchor href="http://www.suayan.com/kyo/pdf/digital-portfolio-72dpi.pdf">Evening By The Water's Edge</anchor>
+                        - (1.5mb) a series of night photographs in gelatin silver print.</listitem2>
+                    <listitem2>pdf: <anchor href="http://www.suayan.com/kyo/pdf/digital-portfolio-large.pdf">Evening By The Water's Edge</anchor>  - [10mb] print resolution version</listitem2>
+                    <listitem2>pdf: <anchor href="http://www.suayan.com/kyo/pdf/newsweb.pdf">The Lake Pyramid Times</anchor>  - 2005 [1.5mb]</listitem2>
+                    <listitem2>pdf: <anchor href="http://www.suayan.com/kyo/pdf/newsweb2.pdf">The Lake Pyramid Times</anchor>  - 2005 [15mb] print resolution version</listitem2>
+                </list2>
+            </section>
+
+
+            <section>
+                <head>Website Archive</head>
+                <subtext>These are archived versions of sites I've worked on in the past.
+                    The markup on these pages are likely to be very old (some even targetted HTML 2.0 or 3.x DTDs).
+                    For my more recent work, please go to the <anchor href="/development">development</anchor> and
+                    <anchor href="/portfolio">portfolio</anchor> sections.</subtext>
+                <break/>
+                <list2>
+                    <listitem2>2005: <anchor href="http://www.filphoto.com/">FilPhoto.com</anchor>  - theme design.</listitem2>
+                    <listitem2>2005: <anchor href="http://home.barangayamerika.com">BarangayAmerika</anchor></listitem2>
+                    <listitem2>2001: <anchor href="http://www.dsisystem.com/">http://www.dsisystem.com/</anchor></listitem2>
+                    <listitem2>2000: <anchor href="http://www.suayan.com/kyo/work/uplb">http://www.uplb.edu.ph</anchor>  - (concept)</listitem2>
+                    <listitem2>1999: <anchor href="http://www.suayan.com/kyo/work/imagineus/">http://www.imagineus.net/</anchor> - (archived)</listitem2>
+                    <listitem2>1998: <anchor href="http://www.icrg.com/">http://www.icrg.com/</anchor> </listitem2>
+                    <listitem2>1997: <anchor href="http://www.suayan.com/kyo/work/palmpilot/">Piloteer Resources</anchor></listitem2>
+                    <listitem2>1997: <anchor href="http://www.suayan.com/kyo/work/natures_fire">Nature's Fire</anchor>  - (archived)</listitem2>
+                    <listitem2>1997: <anchor href="http://www.suayan.com/kyo/work/mayamaya">Maya-Maya Reef Club</anchor>  - (archived)</listitem2>
+                    <listitem2>1997: <anchor href="http://www.suayan.com/kyo/work/mindanao">http://www.mindanao.org</anchor>  - (archived)</listitem2>
+                    <listitem2>1997: <anchor href="http://www.suayan.com/kyo/work/adformatix">Adformatix Selection</anchor>  - (archived)</listitem2>
+                    <listitem2>1996: <anchor href="http://www.suayan.com/kyo/work/cravings">The Coffee Beanery</anchor>  - (archived)</listitem2>
+                    <listitem2>1996: <anchor href="http://www.suayan.com/kyo/work/cpmi">Century Properties Management Inc.</anchor>  - (archived)</listitem2>
+                    <listitem2>1995: <anchor href="http://www.suayan.com/kyo/work/mozcom.com">http://www.mozcom.com</anchor>  - (archived)</listitem2>
+                    <listitem2>1995: <anchor href="http://www.suayan.com/kyo/work/subic/">History of Subic Bay</anchor> </listitem2>
+                </list2>
+            </section>
+
+            <section>
+                <head>Personal Site Archive</head>
+                <subtext>Various looks of my site through the years:</subtext>
+                <list2>
+                    <listitem2>2000: <anchor href="http://www.suayan.com/kyo/retrospective/suayan.com.02/">suayan.com.02</anchor></listitem2>
+                    <listitem2>1999: <anchor href="http://www.suayan.com/kyo/retrospective/suayan.com.01/">suayan.com.01</anchor></listitem2>
+                    <listitem2>1999: <anchor href="http://www.suayan.com/kyo/retrospective/05/">05</anchor></listitem2>
+                    <listitem2>1998: <anchor href="http://www.suayan.com/kyo/retrospective/04/">04</anchor></listitem2>
+                    <listitem2>1996: <anchor href="http://www.suayan.com/kyo/retrospective/03/">03</anchor></listitem2>
+                    <listitem2>1995: <anchor href="http://www.suayan.com/kyo/retrospective/02/">02</anchor></listitem2>
+                    <listitem2>1995: <anchor href="http://www.suayan.com/kyo/retrospective/01/">01</anchor></listitem2>
+                </list2>
+            </section>
+
+            <section>
+                <head>Photography</head>
+                <subtext>The joy of image making...</subtext>
+                <list2>
+                    <listitem2><anchor href="http://www.flickr.com/photos/ksuayan">@flickr.com</anchor></listitem2>
+                    <listitem2><anchor href="http://www.pbase.com/ksuayan">@pbase.com</anchor></listitem2>
+                    <listitem2><anchor href="http://www.filphoto.com/index.php?cat=10077">@filphoto.com</anchor></listitem2>
+                    <listitem2><anchor href="http://photo.net/photodb/user?user_id=279214">@photo.net</anchor></listitem2>
+                    <listitem2><anchor href="/kyo/photoblog">old photoblog</anchor></listitem2>
+                    <listitem2><anchor href="/kyo/webslides/">35mm</anchor></listitem2>
+                    <listitem2><anchor href="/kyo/studio/grand_canyon/">grand canyon</anchor> [1999]</listitem2>
+                    <listitem2><anchor href="/kyo/studio/yosemite/">yosemite</anchor> [1999]</listitem2>
+                    <listitem2><anchor href="http://www.thenocturnes.com/exhibits/embarcadero.html">embarcadero nocturne</anchor> [jan-feb 2005]</listitem2>
+                    <listitem2><anchor href="http://www.thenocturnes.com/exhibits/surreal.html">surrealistic nocturne</anchor> [nov 2003]</listitem2>
+                </list2>
+            </section>
+
+        </body>
+    </page>
+
+
+
+    <page id="artist_cv">
+
+        <meta>
+            <title>Kyo Suayan | Artist's CV</title>
+            <description>Kyo Suayan's Artist's Curriculum Vitae</description>
+            <keywords>photography,film,exhibits,group shows</keywords>
+        </meta>
+
+        <body>
+            <section>
+                <head>Education</head>
+                <subtext>BS Computer Science, University of the Philippines, 1994</subtext>
+
+                <head>UC Berkeley Extension Courses</head>
+                <list2>
+                    <listitem2>Building Your Portfolio, Fall 2003, Barbara Thompson</listitem2>
+                    <listitem2>Night Photography, Spring 2003, Tim Baskerville</listitem2>
+                    <listitem2>Intermediate Photography, Winter 2002, Amie Potsic</listitem2>
+                    <listitem2>Beginning Photography, Summer 2002, Barbara Thompson</listitem2>
+                </list2>
+            </section>
+
+            <section>
+                <head>Workshops</head>
+                <list2>
+                    <listitem2>Chuck Gardner's Photography Class, Kodak Philippines/Center for Creative Computing, 2001</listitem2>
+                    <listitem2>Epson Print Academy with Vincent Versace, Burlingame, CA, March 2003</listitem2>
+                </list2>
+            </section>
+
+
+            <section>
+                <head>Solo Exhibitions</head>
+                <list2>
+                    <listitem2>"On Paper", works on ink, mixed media and watercolor, Philippine Science High School, 1989</listitem2>
+                    <listitem2>"Colorstorm" , first one man show, works on watercolor and pastel, PSHS, 1988</listitem2>
+                </list2>
+            </section>
+
+            <section>
+                <head>Group Exhibitions</head>
+                <list2>
+                    <listitem2>"Bank Show 2008", Dec 2008, Mina Dresden Gallery, San Francisco, CA</listitem2>
+                    <listitem2>"Embarcadero Nocturne", Jan-Feb 2005, San Francisco, CA</listitem2>
+                    <listitem2>"Surrealistic Nocturne", Nov 2003, Online Group Exhibit</listitem2>
+                    <listitem2>Ten Photographers", Jan 2003, Sausalito, CA</listitem2>
+                    <listitem2>"First Group Exhibit", The UPLB Painters Club, 1994</listitem2>
+                    <listitem2>"Recent Works" with R. Navarro and D. Ravelas, UPLB Sining Makiling Gallery, September 1994</listitem2>
+                </list2>
+            </section>
+
+            <section>
+                <head>Published Work</head>
+                <list2>
+                    <listitem2>"Chroma", Self-published selection of 44 photographs, lulu.com/ksuayan, 2006</listitem2>
+                    <listitem2>"California 24/7", DK Publishing, 2004</listitem2>
+                    <listitem2>Mabuhay Magazine, "Black and Wide" by Walter C. Villa, October 2002, pp. 48-51</listitem2>
+                </list2>
+            </section>
+
+            <section>
+                <head>Awards &amp; Honors</head>
+                <list2>
+                    <listitem2>America 24/7’s Top 100 Student Photographers, 2004</listitem2>
+                    <listitem2>Best in Art, 1990, PSHS</listitem2>
+                    <listitem2>Jose Joya Award for the Arts, 1990, PSHS</listitem2>
+                    <listitem2>Most Outstanding in Art, 1986, Assumption Convent, Iloilo</listitem2>
+                </list2>
+            </section>
+
+            <section>
+                <head>Contests</head>
+                <list2>
+                    <listitem2>First Place, On the Spot Painting Competition, UPLB Alumni Association Loyalty Day, October 1992</listitem2>
+                    <listitem2>Winner, Logo Design Contest, UPLB Committee on Culture and the Arts</listitem2>
+                    <listitem2>First Place, Logo Design Contest, PSHS 25th Anniversary, 1990</listitem2>
+                </list2>
+            </section>
+
+            <section>
+                <head>Affiliations</head>
+                <list2>
+                    <listitem2>PhilWeavers Network, Founding Member</listitem2>
+                    <listitem2>PhilDV, the Philippine Digital Video mailinglist, List Moderator</listitem2>
+                    <listitem2>UPLB Painters Club, Charter Member and Vice President, 1992</listitem2>
+                </list2>
+            </section>
+
+            <para>References available upon <anchor href="/contact">request</anchor>.</para>
+        </body>
+    </page>
+</content>
