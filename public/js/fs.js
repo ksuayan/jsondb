@@ -7,8 +7,8 @@
             bgHeightClass: 'bgheight',
             bgWidthClass: 'bgwidth',
             refreshInterval: 5000,
-            fadeOutTime: 700,
-            fadeInTime: 500,
+            fadeOutTime: 500,
+            fadeInTime: 700,
             images: ["images/image-001.png","images/image-002.png","images/image-003.png"]
         }, options);
 
@@ -20,6 +20,8 @@
             index = 0;
 
         var refreshImage = function() {
+            imageAspect = $bg.width() / $bg.height();
+            windowAspect = theWindow.width()/theWindow.height();
             if (index < settings.images.length - 1) {
                 index++;
             } else {
@@ -27,27 +29,28 @@
             }
             var onComplete = function() {
                 $bg.attr("src", settings.images[index]);
-                imageAspect = $bg.width() / $bg.height();
                 $bg.fadeIn(settings.fadeInTime);
             };
             $bg.fadeOut(settings.fadeOutTime, onComplete);
         };
 
-        var setRefreshInterval = function() {
-            if (!intervalHandler) {
-                intervalHandler = setInterval(refreshImage, settings.refreshInterval);
-            }
-        };
-
-        function resizeBackgound() {
-            windowAspect = theWindow.width()/theWindow.height();
+        var resizeBackgound = function() {
             if (windowAspect < imageAspect) {
                 $bg.removeClass().addClass(settings.bgHeightClass);
             } else {
                 $bg.removeClass().addClass(settings.bgWidthClass);
             }
+            imageAspect = $bg.width() / $bg.height();
+            windowAspect = theWindow.width()/theWindow.height();
         }
-        theWindow.resize(resizeBackgound).trigger("resize");
+
+        var setRefreshInterval = function() {
+            theWindow.resize(resizeBackgound).trigger("resize");
+            if (!intervalHandler) {
+                intervalHandler = setInterval(refreshImage, settings.refreshInterval);
+            }
+        };
+
         setRefreshInterval();
         return this;
     };
