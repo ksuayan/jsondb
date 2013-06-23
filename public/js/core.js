@@ -4,7 +4,6 @@ $(function() {
         var dt = new Date($(this).attr("datetime"));
         $(this).text(moment(dt).fromNow());
     }
-
     $("time.timeago").each(toWords);
 
     var hideDeleteModal = function() {
@@ -27,7 +26,6 @@ $(function() {
         });
     };
 
-
     // #delete Modal
     $("a.delete").click(function(){
         console.debug("bloop!", this.id);
@@ -35,7 +33,6 @@ $(function() {
         $("#delete-modal").data("delete-id", this.id);
         $("#delete-modal").modal('show');
     });
-
 
     $("#delete-ok").click(function(){
         var id = $("#delete-modal").data("delete-id");
