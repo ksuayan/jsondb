@@ -1,16 +1,16 @@
 $(function() {
-    
+
     function toWords() {
         var dt = new Date($(this).attr("datetime"));
-        $(this).text($.timeago(dt));
+        $(this).text(moment(dt).fromNow());
     }
-      
+
     $("time.timeago").each(toWords);
-    
+
     var hideDeleteModal = function() {
         $("#delete-modal").modal('hide');
     };
-    
+
     var deleteDoc = function(id) {
         $.ajax({
             url: '/jsondb/'+id,
@@ -27,7 +27,7 @@ $(function() {
         });
     };
 
-    
+
     // #delete Modal
     $("a.delete").click(function(){
         console.debug("bloop!", this.id);
@@ -42,13 +42,13 @@ $(function() {
         id = id.replace("id-","");
         if (id) {
             console.debug("data", id);
-            deleteDoc(id);            
+            deleteDoc(id);
         }
     });
 
     $("#delete-cancel").click(function(){
         hideDeleteModal();
     });
-    
-    
+
+
 });
