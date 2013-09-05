@@ -15,11 +15,13 @@ $(window).load(function () {
     }
 
     console.debug("images", images);
-
+/*
     $("body").fullscreen({
         refreshInterval: 15000,
         fadeOutTime: 1000,
         fadeInTime: 50,
         images: images
     });
+*/
+    $("#search-field").search();
 });
