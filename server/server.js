@@ -6,7 +6,7 @@ var conf = require('./conf');
 var jsondb = require('./jsondb');
 var view = require('./view');
 var api = require('./api');
-var trackdb = require('./itunes');
+var itunes = require('./itunes');
 var path = require('path');
 
 console.log(conf);
@@ -20,7 +20,7 @@ app.configure(function(){
     app.use(express.favicon());
     app.use(express.cookieParser());
     app.use(express.session({secret : 'booyakasha'}));
-    app.use(express.errorHandler({ 
+    app.use(express.errorHandler({
         dumpExceptions : false,
         showStack : false}));
 });
@@ -53,10 +53,11 @@ app.get('/doc', api.GetDocument);
 app.get('/doc/:id', api.GetDocument);
 app.post('/doc', api.SaveDocument);
 
-app.get('/genre', trackdb.GetGenre);
-app.get('/search/:term', trackdb.SearchTerm);
-app.get('/track', trackdb.GetTrackList);
-app.get('/track/:id', trackdb.GetTrack);
+app.get('/genre', itunes.GetGenre);
+app.get('/search/:term', itunes.SearchTerm);
+app.get('/multi-search/:term', itunes.SearchMultiCriteria);
+app.get('/track', itunes.GetTrackList);
+app.get('/track/:id', itunes.GetTrack);
 
 io.sockets.on('connection', function (socket) {
     socket.emit('news', { hello: 'world' });
