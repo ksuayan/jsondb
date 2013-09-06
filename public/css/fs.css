@@ -17,6 +17,7 @@ body  {background-color:#000;}
 .trans p { font: 16px/24px 'OpenSansRegular', Arial, sans-serif; }
 
 #search-field {
+    color: #ccc;
     margin: 0px;
     font-family: MuseoSlab500Regular, "Helvetica Neue Light", Arial, sans-serif;
     width: 500px;
@@ -29,4 +30,29 @@ body  {background-color:#000;}
     margin: 0px;
     background-color: rgba(255,255,255,1);
     color: #000;
+    overflow-y: auto;
+
+}
+
+#search-results .heading {
+    padding: 12px;
+    background-color: #efefef;
+    font-family: 'OpenSansRegular', 'Helvetica Neue Light', Arial, sans-serif;
+    font-size: 12pt;
+}
+
+#search-results .track {
+    padding: 10px;
+    color: #666;
+    font-family: 'OpenSansRegular', 'Helvetica Neue Light', Arial, sans-serif;
+    font-size: 10pt;
+    border-bottom: #efefef 1px solid;
+}
+
+#search-results .title {
+    font-weight: bold;
+}
+
+#search-results .artist {
+    font-weight: normal;
 }

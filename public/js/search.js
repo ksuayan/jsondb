@@ -7,18 +7,60 @@
         var settings = $.extend({
             input: "search-field",
             results: "search-results",
+            minchars: 3,
             throttle: 1000
         }, options);
 
-        var showResults = function() {
+        var showTracks = function(collectionName, data) {
+            var tracks = data.tracks;
+
+            if (data["count"] && tracks && tracks.length){
+                that.resultsDiv.append("<div class='heading'>"+collectionName+"</div>");
+                for(var i= 0,n=tracks.length; i<n; i++) {
+                    var track = "<div class='track'>"
+                        + "<div class='title'>"+tracks[i]["Name"]+"</div>"
+                        + "<div class='artist'>"+tracks[i]["Artist"]+"</div>"
+                        + "<div class='album'>"+tracks[i]["Album"]+"</div>"
+                        + "</div>";
+
+                    that.resultsDiv.append(track);
+                }
+            }
+        };
+
+        var showResults = function(response) {
             that.resultsDiv.show();
+            var keys = response.keys;
+            that.resultsDiv.empty();
+            for (var i=0,n=keys.length;i<n;i++){
+                var collectionName = keys[i];
+                var data = response["data"][collectionName];
+                showTracks(collectionName, data);
+            }
+
+        };
+
+        var requestQuery = function() {
+            var term = that.searchInput.val().trim();
+            console.log("length", term, settings.minchars);
+            if (term.length<settings.minchars) {
+                that.resultsDiv.empty();
+                that.resultsDiv.hide();
+                return;
+            }
+            var url = "/multi-search/"+term;
+            $.ajax({
+                url: url,
+                type: 'GET',
+                dataType: 'json',
+                success: function(response,status,jqxhr) {
+                    showResults(response);
+                }
+            });
         };
 
         var handleKey = function(event) {
-            if (event.which == 13) {
-                event.preventDefault();
-            }
-            showResults();
+            requestQuery();
         };
 
         var init = function() {

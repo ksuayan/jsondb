@@ -134,7 +134,7 @@ TrackDB.prototype.SearchMultiCriteria = function(request, response) {
     var result = {status:"error"};
     var term = request.params.term;
     var sortOrder = {'Artist':1, 'Album':1};
-    var resultObject = {};
+    var resultObject = {keys:[],data:{}};
     var processed = 0; // implement this with timeouts.
     var attributeList = ["Name","Artist","Album"];
 
@@ -144,7 +144,9 @@ TrackDB.prototype.SearchMultiCriteria = function(request, response) {
     };
 
     var onDataSuccess = function(attribute, data) {
-        resultObject[attribute] = {
+
+        resultObject["keys"].push(attribute);
+        resultObject["data"][attribute] = {
             "count": data.length,
             "tracks" : data
         };
