@@ -1,0 +1,58 @@
+
+#search-field {
+    color: #97B5C1;
+    margin: 0px;
+    font-family: MuseoSlab500Regular, "Helvetica Neue Light", Arial, sans-serif;
+    width: 580px;
+    height: 50px;
+    font-size: 30pt;
+}
+
+#search-results {
+    padding: 0px;
+    margin: 0px;
+    background-color: #F1EEE7;
+    color: #113D58;
+    overflow-y: auto;
+
+}
+
+#search-results .heading {
+    padding: 10px;
+    color: #97B5C1;
+    background-color: #4B778C;
+    font-family: 'OpenSansRegular', 'Helvetica Neue Light', Arial, sans-serif;
+    font-size: 14pt;
+}
+
+#search-results .track {
+    padding: 10px;
+    color: #666;
+    font-family: 'OpenSansRegular', 'Helvetica Neue Light', Arial, sans-serif;
+    font-size: 10pt;
+    border-bottom: #ccc 1px solid;
+}
+
+#search-results .title {
+    font-weight: bold;
+}
+
+#search-results .artist {
+    font-weight: normal;
+}
+
+.found {
+    padding: 15px;
+    font-family: 'OpenSansRegular', 'Helvetica Neue Light', Arial, sans-serif;
+    font-size: 14pt;
+    background-color: #113D58;
+    color: #F1EEE7;
+}
+
+.none-found {
+    padding: 10px;
+    font-family: 'OpenSansRegular', 'Helvetica Neue Light', Arial, sans-serif;
+    font-size: 14pt;
+    background-color: #ffffcc;
+    color: #333;
+}

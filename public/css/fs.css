@@ -8,51 +8,9 @@ body  {background-color:#000;}
     margin: 25px;
     padding: 20px;
 }
-
 .trans h1, .trans p { color: #fff; padding: 0px; margin: 0px; }
 .trans h1 {
     font: 30px/36px 'MuseoSlab500Regular', Arial, sans-serif;
     margin: 0px 0px 20px 0px;
 }
 .trans p { font: 16px/24px 'OpenSansRegular', Arial, sans-serif; }
-
-#search-field {
-    color: #ccc;
-    margin: 0px;
-    font-family: MuseoSlab500Regular, "Helvetica Neue Light", Arial, sans-serif;
-    width: 500px;
-    height: 50px;
-    font-size: 30pt;
-}
-
-#search-results {
-    padding: 0px;
-    margin: 0px;
-    background-color: rgba(255,255,255,1);
-    color: #000;
-    overflow-y: auto;
-
-}
-
-#search-results .heading {
-    padding: 12px;
-    background-color: #efefef;
-    font-family: 'OpenSansRegular', 'Helvetica Neue Light', Arial, sans-serif;
-    font-size: 12pt;
-}
-
-#search-results .track {
-    padding: 10px;
-    color: #666;
-    font-family: 'OpenSansRegular', 'Helvetica Neue Light', Arial, sans-serif;
-    font-size: 10pt;
-    border-bottom: #efefef 1px solid;
-}
-
-#search-results .title {
-    font-weight: bold;
-}
-
-#search-results .artist {
-    font-weight: normal;
-}

@@ -28,7 +28,6 @@ var TrackItem = new Schema({
 var TrackDB = function(){
     console.log("Initialized TrackDB.");
     mongoose.connect(conf.app.mongoURL, {db:{safe:true}});
-
     this.pagination = {skip:0,pagination:10};
     this.fields = {
         "_id": 1,
@@ -137,20 +136,21 @@ TrackDB.prototype.SearchMultiCriteria = function(request, response) {
     var resultObject = {keys:[],data:{}};
     var processed = 0; // implement this with timeouts.
     var attributeList = ["Name","Artist","Album"];
+    var total = 0;
 
     var onAllQueriesComplete = function() {
-        console.log("processed:", processed);
+        resultObject.total = total;
         response.send(resultObject);
     };
 
     var onDataSuccess = function(attribute, data) {
-
         resultObject["keys"].push(attribute);
         resultObject["data"][attribute] = {
             "count": data.length,
             "tracks" : data
         };
         processed++;
+        total = total + ((data.length)?data.length:0);
         if (processed === attributeList.length) {
             onAllQueriesComplete();
         }
@@ -172,7 +172,6 @@ TrackDB.prototype.SearchMultiCriteria = function(request, response) {
     };
 
     multiQuery();
-
 };
 
 TrackDB.prototype.GetGenre = function(request, response) {
