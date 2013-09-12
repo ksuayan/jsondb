@@ -37,8 +37,12 @@
     font-weight: bold;
 }
 
-#search-results .artist {
+#search-results .normal {
     font-weight: normal;
+}
+
+.count {
+    color: #97B5C1;
 }
 
 .found {

@@ -14,19 +14,38 @@
             requestInterval: 2000
         }, options);
 
+        var showHeading = function(collectionName, count) {
+            var heading = "<div class='heading'>"
+                + collectionName + ": " + count
+                + "</div>";
+            that.resultsDiv.append(heading);
+        };
+
         var showTracks = function(collectionName, data) {
             var tracks = data.tracks;
-
             if (data["count"] && tracks && tracks.length){
-                var heading = "<div class='heading'>"
-                    + collectionName + ": " + data["count"]
-                    + "</div>";
-                that.resultsDiv.append(heading);
+                showHeading(collectionName, data["count"]);
                 for(var i= 0,n=tracks.length; i<n; i++) {
                     var track = "<div class='track'>"
                         + "<div class='title'>"+tracks[i]["Name"]+"</div>"
-                        + "<div class='artist'>"+tracks[i]["Artist"]+"</div>"
-                        + "<div class='album'>"+tracks[i]["Album"]+"</div>"
+                        + "<div class='normal'>"+tracks[i]["Artist"]+"</div>"
+                        + "<div class='normal'>"+tracks[i]["Album"]+"</div>"
+                        + "</div>";
+                    that.resultsDiv.append(track);
+                }
+            }
+        };
+
+        var showTitle = function(collectionName, data) {
+            var tracks = data.tracks;
+            if (data["count"] && tracks && tracks.length){
+                showHeading(collectionName, data["count"]);
+                for(var i= 0,n=tracks.length; i<n; i++) {
+                    var track = "<div class='track'>"
+                        + "<div class='title'>"
+                        + tracks[i]["_id"]
+                        + " <span class=\'count\'>"+ tracks[i]["value"] + "</span>"
+                        + "</div>"
                         + "</div>";
                     that.resultsDiv.append(track);
                 }
@@ -50,7 +69,14 @@
                 for (var i=0,n=keys.length;i<n;i++){
                     var collectionName = keys[i];
                     var data = response["data"][collectionName];
-                    showTracks(collectionName, data);
+
+                    if (response["data"][collectionName]["type"]==="find") {
+                        showTracks(collectionName, data);
+                    } else {
+                        showTitle(collectionName, data);
+                    }
+
+
                 }
             } else {
                 that.resultsDiv.append("<div class='none-found'>No results found.</div>");
