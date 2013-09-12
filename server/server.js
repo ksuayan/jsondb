@@ -53,7 +53,6 @@ app.get('/doc', api.GetDocument);
 app.get('/doc/:id', api.GetDocument);
 app.post('/doc', api.SaveDocument);
 
-app.get('/genre', itunes.GetGenre);
 app.get('/search/:term', itunes.SearchTerm);
 app.get('/multi-search/:term', itunes.SearchMultiCriteria);
 app.get('/track', itunes.GetTrackList);

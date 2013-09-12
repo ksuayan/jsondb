@@ -2,4 +2,6 @@
 node_modules
 public/fonts
 public/js/goog
+public/images
+public/audio
 .idea/workspace.xml
