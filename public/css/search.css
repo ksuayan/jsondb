@@ -1,3 +1,15 @@
+.trans {
+    max-width: 600px;
+    background-color: rgba(0,0,0,0.75);
+    margin: 25px;
+    padding: 20px;
+}
+.trans h1, .trans p { color: #fff; padding: 0px; margin: 0px; }
+.trans h1 {
+    font: 30px/36px 'MuseoSlab500Regular', Arial, sans-serif;
+    margin: 0px 0px 20px 0px;
+}
+.trans p { font: 16px/24px 'OpenSansRegular', Arial, sans-serif; }
 
 #search-field {
     color: #97B5C1;
