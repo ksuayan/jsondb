@@ -22,7 +22,7 @@
 </script>
 <script type="text/javascript">
 
-    var locations = [
+    var addresses = [
         {
             "name": "Stanford Hospitals &amp; Clinics",
             "address" : "300 Pasteur Drive, Stanford, CA, 94305"
@@ -138,7 +138,7 @@
             "featureType": "road.local",
             "elementType": "labels.text.fill",
             "stylers": [
-                { "color": "#333333" }
+                { "color": "#fff" }
             ]
         },{
             "featureType": "road.arterial",
@@ -152,60 +152,59 @@
 
     var mapOptions = {
         // center: new google.maps.LatLng(37.557523,-122.294914),
-        center: new google.maps.LatLng(37.433670, -122.177542),
+        center: new google.maps.LatLng(37.4344738, -122.1801845),
         zoom: 18,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
-    var contentString = '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h2 id="firstHeading" class="firstHeading">Heading</h2>'+
+    var createInfoWindow = function(name, address, location) {
+        var contentString = '<div id="content">'+
+            // '<div id="siteNotice">this is  a test</div>'+
+            '<h2 id="firstHeading" class="firstHeading">' + name +'</h2>'+
             '<div id="bodyContent">'+
-            '<p><b>Name</b>, ' +
-            'some description here. '+
-            '</p>'+
+            '<p>'+address+'</p>'+
+            '<p>'+location+'</p>'+
             '</div>'+
             '</div>';
 
-    var infowindow = new google.maps.InfoWindow({
-        content: contentString
-    });
-
-    var codeAddress = function() {
-        var address = document.getElementById('address').value;
-        geocoder.geocode( { 'address': address}, function(results, status) {
-            if (status == google.maps.GeocoderStatus.OK) {
-                map.setCenter(results[0].geometry.location);
-                var marker = new google.maps.Marker({
-                    map: map,
-                    position: results[0].geometry.location
-                });
-            } else {
-                console.log('Geocode was not successful for the following reason: ' + status);
-            }
-        });
+        return new google.maps.InfoWindow({
+            content: contentString
+        })
     };
 
-    var placeMarker = function(event) {
-        var coords = event.latLng
-        var marker = new google.maps.Marker({
-            position: coords,
-            map: map
+    var placeMarkerByAddress = function(addressObj) {
+        geocoder.geocode( { 'address': addressObj.address }, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                var isOpen = false;
+                var position = results[0].geometry.location;
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: position
+                });
+                var infoWindow = createInfoWindow(addressObj.name, addressObj.address, position );
+                google.maps.event.addListener(marker, 'click', function() {
+                    if (!isOpen) {
+                        map.setCenter(position);
+                        infoWindow.open(map, marker);
+                    } else {
+                        infoWindow.close();
+                    }
+                    isOpen = !isOpen;
+                });
+
+            } else {
+                console.log('Geocode failed for: ' + addressObj.address + ":" + status);
+            }
         });
-        map.setCenter(coords);
-        google.maps.event.addListener(marker, 'click', function() {
-            infowindow.open(map, marker);
-        });
-        console.debug("coords", coords);
     };
 
     var initialize = function() {
         map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
         map.setOptions({styles: mapStyles});
-        google.maps.event.addListener(map, 'click', placeMarker);
-
         geocoder = new google.maps.Geocoder();
+        for (var i= 0, n=addresses.length; i<n; i++) {
+            placeMarkerByAddress(addresses[i]);
+        }
     };
 
     var map = null;
@@ -216,12 +215,6 @@
 </script>
 </head>
 <body>
-
-<div id="panel">
-    <input id="address" type="textbox" value="Stanford Hospital and Clinics">
-    <input type="button" value="Geocode" onclick="codeAddress()">
-</div>
 <div id="map-canvas"/>
-
 </body>
 </html>
