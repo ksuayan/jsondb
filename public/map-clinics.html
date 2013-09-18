@@ -18,8 +18,9 @@
     }
 </style>
 <script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key773684786636-40gep7g4nof9jgoh0epobnifn03p4g0a.apps.googleusercontent.com&sensor=false">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrgK46nY9WqGUPRy3S0MFGNMlbEojkN4U&sensor=false">
 </script>
+<script type="text/javascript" src="/js/timeoutCycle.js"></script>
 <script type="text/javascript">
 
     var addresses = [
@@ -97,7 +98,6 @@
         }
     ];
 
-
     var mapStyles = [
         {
             "featureType": "water",
@@ -157,6 +157,9 @@
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
+    var positions = [];
+
+
     var createInfoWindow = function(name, address, location) {
         var contentString = '<div id="content">'+
             // '<div id="siteNotice">this is  a test</div>'+
@@ -177,38 +180,70 @@
             if (status == google.maps.GeocoderStatus.OK) {
                 var isOpen = false;
                 var position = results[0].geometry.location;
+                // console.log(position.lat(), position.lng());
+                positions.push(new google.maps.LatLng(position.lat(), position.lng()));
+                console.log('Success: ' + addressObj.address + ": " + position);
                 var marker = new google.maps.Marker({
                     map: map,
                     position: position
                 });
                 var infoWindow = createInfoWindow(addressObj.name, addressObj.address, position );
+
+                /*
                 google.maps.event.addListener(marker, 'click', function() {
                     if (!isOpen) {
-                        map.setCenter(position);
+                        // map.setCenter(position);
                         infoWindow.open(map, marker);
                     } else {
                         infoWindow.close();
                     }
                     isOpen = !isOpen;
                 });
+                */
+                
+                google.maps.event.addListener(marker, 'mouseover', function() {
+                    infoWindow.open(map, marker);
+                });
 
+                google.maps.event.addListener(marker, 'mouseout', function() {
+                    infoWindow.close();
+                });
             } else {
-                console.log('Geocode failed for: ' + addressObj.address + ":" + status);
+                console.log('Failed: ' + addressObj.address + ": " + status);
             }
         });
+    };
+
+    var zoomToFit = function() {
+        var bounds = new google.maps.LatLngBounds();
+        for (var i = 0, n = positions.length; i < n; i++) {
+            bounds.extend(positions[i]);
+        }
+        map.fitBounds(bounds);
     };
 
     var initialize = function() {
         map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
         map.setOptions({styles: mapStyles});
         geocoder = new google.maps.Geocoder();
-        for (var i= 0, n=addresses.length; i<n; i++) {
-            placeMarkerByAddress(addresses[i]);
-        }
+
+        var count = addresses.length, i=0;
+        var timeoutCycle = new gb.util.TimeOutCycle(500, function(){
+            if (i < count) {
+                zoomToFit();
+                placeMarkerByAddress(addresses[i]);
+                i++;
+            } else {
+                console.log("timeout killed.");
+                timeoutCycle.Stop();
+            }
+        });
+        timeoutCycle.Start();
     };
 
     var map = null;
     var geocoder = null;
+
     google.maps.visualRefresh = true;
     google.maps.event.addDomListener(window, 'load', initialize);
 
