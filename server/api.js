@@ -29,5 +29,28 @@ JsonHandler.prototype.SaveDocument = function(request, response) {
     response.send({status:"ok"});
 };
 
+JsonHandler.prototype.SaveLocation = function(request, response) {
+    var doc = {
+        name : request.body.name,
+        address : request.body.address,
+        loc: request.body.loc
+    };
+    var instance = new jsondb.LocationDbModel(doc);
+    instance.save();
+    response.send({status:"ok"});
+};
+
+JsonHandler.prototype.GetLocations = function(request, response) {
+    var result = {status:"error"};
+    jsondb.LocationDbModel.find({}, function(err, docs) {
+        if (err) {
+            console.log(err);
+        } else {
+            result = {status : "ok", results : docs };
+        }
+        response.send(result);
+    });
+
+};
 
 module.exports = new JsonHandler();

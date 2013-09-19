@@ -53,6 +53,11 @@ app.get('/doc', api.GetDocument);
 app.get('/doc/:id', api.GetDocument);
 app.post('/doc', api.SaveDocument);
 
+// LocationsDB
+app.get('/geo', api.GetLocations);
+app.post('/geo', api.SaveLocation);
+
+
 app.get('/search/:term', itunes.SearchTerm);
 app.get('/multi-search/:term', itunes.SearchMultiCriteria);
 app.get('/track', itunes.GetTrackList);
